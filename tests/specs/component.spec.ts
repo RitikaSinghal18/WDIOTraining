@@ -18,9 +18,11 @@ describe('Verify functionality on hotel tab', () => {
 
   it('Results displayed are corresponding to the input fields', () => {
     hotelApp.navigateToHotelTab();
-    hotelApp.enterDestinationAndDates(hotelPageData.hotel.search.destination,
-                                      hotelPageData.hotel.search.checkInDate, 
-                                      hotelPageData.hotel.search.checkOutDate);
+    hotelApp.enterDestinationAndDates(
+      hotelPageData.hotel.search.destination,
+      hotelPageData.hotel.search.checkInDate, 
+      hotelPageData.hotel.search.checkOutDate
+    );
     hotelApp.searchHotels();
 
     var hotelResultsCount = hotelApp.getHotelResultsCount();
@@ -28,7 +30,7 @@ describe('Verify functionality on hotel tab', () => {
     expect(hotelResultsCount).toContain("1 to 25");
 
     var hotelResults = hotelApp.getHotelResultsInfo();
-    
+
     expect(hotelResults).toContain(hotelPageData.hotel.result.destination);
     expect(hotelResults).toContain(hotelPageData.hotel.result.checkInDate);
     expect(hotelResults).toContain(hotelPageData.hotel.result.checkOutDate);

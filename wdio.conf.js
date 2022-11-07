@@ -18,12 +18,13 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        // './lib/specs/component.spec.js',
-        './tests/specs/component.spec.ts',
+         './lib/specs/component.spec.js',
+        //'./tests/specs/component.spec.ts',
     ],
     suites: {
         wdio1: [
-            './tests/specs/component.spec.ts'
+            './lib/specs/component.spec.js',
+            //'./tests/specs/component.spec.ts'
         ]
     },
     // Patterns to exclude.
