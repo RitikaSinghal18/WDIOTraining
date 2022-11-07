@@ -24,5 +24,21 @@ export class HotelApp {
         return this.landingPage.isHotelTabSelected();
     }
 
+    enterDestinationAndDates(destination: string, checkInDate: string, checkOutDate:string){
+        this.hotelPage.enterDestination(destination);
+        this.hotelPage.enterCheckInDate(checkInDate);
+        this.hotelPage.enterCheckOutDate(checkOutDate);
+    }
 
+    searchHotels(){
+        this.hotelPage.clickOnHotelSearchButton();
+    }
+
+    getHotelResultsCount(): string{
+        return this.hotelresultPage.getHotelResultsCount();
+    }
+
+    getHotelResultsInfo(): string{
+        return this.hotelresultPage.getHotelResultsInfo();
+    }
 }
